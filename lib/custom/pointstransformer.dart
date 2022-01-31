@@ -1,6 +1,6 @@
 
 import 'package:golf_demo/model/golfmodel.dart';
-import 'package:golf_demo/screens/polygonlist.dart';
+import 'package:golf_demo/utils/polygonlist.dart';
 
 class PointsTransformer {
 

@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:golf_demo/model/golfmodel.dart';
-import 'package:golf_demo/screens/polygonlist.dart';
+import 'package:golf_demo/utils/polygonlist.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class GoGolfMap extends StatefulWidget {
@@ -22,10 +22,6 @@ class _GoGolfMapState extends State<GoGolfMap> {
   late GoogleMapController _googleMapController;
   Completer<GoogleMapController> _controller = Completer();
 
-  //List<LatLng> polygonLatLngs = PolyList().getPloyList();
-//  List<LatLng> polygonLatLngs = [];
-//   List<LatLng> woodsLatLngs = [];
-//   List<LatLng> polygonLatLngs = [];
   List<LatLng> polygonLatLngs = PolyList().getGreenList();
   List<LatLng> woodsLatLngs = PolyList().getPloyList();
   List<LatLng> sandsLatLngs = PolyList().getWoodsList();
@@ -128,23 +124,6 @@ class _GoGolfMapState extends State<GoGolfMap> {
               polygons: _setPolygon(),
               myLocationEnabled: true,
             ),
-            // Align(
-            // alignment: Alignment.bottomCenter,
-            //   child: Row(
-            //     children: [
-            //       RaisedButton(
-            //           color: Colors.black54,
-            //           onPressed: () {
-            //             _isPolygon = true;
-            //
-            //           },
-            //           child: Text(
-            //             'Polygon',
-            //             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-            //           )),
-            //     ],
-            //   ),
-            // )
           ],
         ),
       );
